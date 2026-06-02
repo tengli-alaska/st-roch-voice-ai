@@ -43,6 +43,61 @@ poc_demo/
 
 ## Setup
 
+## For Teammates — Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/tengli-alaska/st-roch-voice-ai.git
+cd st-roch-voice-ai
+```
+
+### 2. Get a Groq API key
+
+Sign up free at https://console.groq.com and copy your key.
+
+### 3. Create virtual environment and install dependencies
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install flask flask-cors sentence-transformers numpy groq
+```
+
+### 4. Install frontend dependencies
+
+```bash
+cd frontend
+npm install
+cd ..
+```
+
+### 5. Set your API key
+
+```bash
+export GROQ_API_KEY="gsk_your_key_here"
+```
+
+### 6. Build the RAG store
+
+```bash
+python3 rag_pipeline.py
+```
+
+### 7. Start backend and frontend (two terminal tabs)
+
+Terminal 1:
+```bash
+python3 backend.py
+```
+
+Terminal 2:
+```bash
+cd frontend && npm start
+```
+
+Visit http://localhost:3000
+
 ### 1. Clone the repository
 
 ```bash
